@@ -39,6 +39,8 @@ namespace COMP123_M2020_FinalExam
             Application.Exit();
         }
 
+        // Finalform_load event handler
+        //When FinalForm is loaded, it will fill out the text values of the textbox controls
         private void FinalForm_Load(object sender, EventArgs e)
         {
             StrengthTextBox.Text = Program.character.Strength;

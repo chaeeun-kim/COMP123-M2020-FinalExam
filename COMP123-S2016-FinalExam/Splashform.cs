@@ -16,7 +16,8 @@ namespace COMP123_M2020_FinalExam
         {
             InitializeComponent();
         }
-
+        // timer1_Tick event handler
+        // after 3 seconds is passed, it will show generateNameFoem and hide Splashform
         private void timer1_Tick(object sender, EventArgs e)
         {
             Program.generateNameForm.Show();

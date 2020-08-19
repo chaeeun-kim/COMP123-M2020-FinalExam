@@ -16,6 +16,9 @@ namespace COMP123_M2020_FinalExam
         {
             InitializeComponent();
         }
+       //<private method GenerateNames>
+       //it creats randome number and then set randomly picked numbers to the selectedindex of listbox.
+       //the selected items of listbox will fill out text property of textbox controls.
         private void  GenerateNames()
         {
             randome = new Random();
@@ -25,18 +28,19 @@ namespace COMP123_M2020_FinalExam
             LastNamesListbox.SelectedIndex = lastname;
             FirstNametextBox.Text = FirstNameListBox.GetItemText(FirstNameListBox.SelectedItem);
             LastNameTextBox.Text = LastNamesListbox.GetItemText(LastNamesListbox.SelectedItem);
-            Program.character.firstname = FirstNametextBox.Text;
-            Program.character.lastname = LastNameTextBox.Text;
-
-
-
+          
         }
 
+        // <GenerateNameForm_Load event handler>
+        //when GernerateNameForm is loaded, GenerateNames method is called
         private void GenerateNameForm_Load(object sender, EventArgs e)
         {
             GenerateNames();
         }
 
+        //< GenerateButton_click event handler>
+        //when GenerateButton is clicked,  GenerateNames method is called and set the value of the properties
+        //( firstname,lastname) of the Program.character object to the value of text property of the TextBox control
         private void GenerateButton_Click(object sender, EventArgs e)
         {
             GenerateNames();
@@ -44,6 +48,9 @@ namespace COMP123_M2020_FinalExam
             Program.character.lastname = LastNameTextBox.Text;
         }
 
+        //<NextButton_click event handler>
+        //when NextButton is clicked, it will show abilitygeneratorform and hide GenerateNameform
+       
         private void NextButton_Click(object sender, EventArgs e)
         {
             AbilityGeneratorForm abilityGeneratorForm = new AbilityGeneratorForm();
